@@ -263,17 +263,14 @@
         <div class="contact-img">
           <img src="restraunt2.jpg" alt="Restraunt Image" />
         </div>
-
         <div class="form-container">
           <h2>Contact Us</h2>
           <input type="text" placeholder="Your Name" />
-          <input type="email" placeholder="E-Mail" />
-          <textarea
-            cols="30"
-            rows="6"
-            placeholder="Type Your Message"
-          ></textarea>
-          <a href="#" class="btn btn-primary">Submit</a>
+          <input type="email" id="email" placeholder="E-Mail" required pattern="[^@\s]+@[^@\s]+\.[^@\s]+" title="Please enter a valid email address" />
+          <textarea cols="30" rows="6" placeholder="Type Your Message"></textarea>
+          <button type="submit" class="btn btn-primary" onclick="validateEmail()">Submit</button>
+          <p id="emailErrorMessage" style="display: none; color: red;">Please enter a valid email address</p>
+        </div>
         </div>
       </div>
     </section>

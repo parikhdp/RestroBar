@@ -18,3 +18,14 @@ document.addEventListener("DOMContentLoaded", function() {
           });
         });
       });
+      function validateEmail() {
+        const emailInput = document.getElementById('email');
+        const emailErrorMessage = document.getElementById('emailErrorMessage');
+    
+        if (!emailInput.checkValidity()) {
+          emailErrorMessage.style.display = 'block';
+        } else {
+          emailErrorMessage.style.display = 'none';
+          // You can put your form submission logic here
+        }
+      }

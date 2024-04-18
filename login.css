@@ -1,0 +1,111 @@
+/* Reset default margins and padding */
+body, h2, p, div {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Set a font style and background color for the body */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f3f3f3;
+    display: flex; /* Use flexbox */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    height: 100vh; /* Full viewport height */
+}
+
+/* Style the page container to center on the screen and define its width */
+.page-container {
+    display: flex; /* Flex layout for left and right containers */
+    max-width: 800px; /* Maximum width of the container */
+    width: 100%; /* Make the container responsive */
+    height: 70%; /* Define a height for the container */
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    background-color: white; /* Background color */
+}
+
+/* Style the left container for the image */
+.left-container {
+    flex: 1; /* Use one portion of the container */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f9f9f9; /* Background color */
+}
+
+/* Update the left container img styles */
+.left-container img {
+    width: 100%; /* Set width to 100% of the container */
+    height: 100%; /* Set height to 100% of the container */
+    object-fit: cover; /* Make the image cover the entire area while keeping its aspect ratio */
+    border-radius: 10px; /* Optional: you can adjust the border radius as per your design preference */
+}
+
+/* Style the right container for the form */
+.right-container {
+    flex: 1; /* Use one portion of the container */
+    padding: 30px 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.right-container h2 {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.input-group {
+    margin-bottom: 15px;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.form-buttons {
+    margin-top: 15px;
+    text-align: center;
+}
+
+.submit-button {
+    padding: 10px 20px;
+    border: none;
+    background-color: #007bff;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.submit-button:hover {
+    background-color: #0056b3;
+}
+
+/* Center-align the text inside the <p><a> elements */
+.auth-links {
+    margin-top: 20px; /* Increase the margin-top as per your preference for spacing */
+    text-align: center; /* Center-align the text inside the <p><a> elements */
+}
+
+.auth-links p {
+    margin-bottom: 10px; /* Add some space between the two links */
+}
+
+p a {
+    color: #007bff; /* Link color */
+    text-decoration: none;
+}
+
+p a:hover {
+    text-decoration: underline;
+}

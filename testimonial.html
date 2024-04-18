@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Testimonials</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
+    <style>
+        /* General Styles */
+        body {
+            font-family: 'Montserrat', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+        }
+
+        /* Testimonial Section Styles */
+        .testimonial-section {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 3rem 0;
+        }
+
+        /* Testimonial Container Styles */
+        .testimonial-container {
+            display: flex;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+
+        .testimonial-container .left {
+            width: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .left-img {
+            width: 100%;
+            height: auto;
+        }
+
+        .testimonial-container .right {
+            width: 50%;
+            padding: 2rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .testimonial-container .right h2 {
+            color: #4CAF50;
+            margin-bottom: 1.5rem;
+        }
+
+        .testimonial-container .right input,
+        .testimonial-container .right textarea {
+            width: 80%;
+            padding: 0.75rem;
+            margin-bottom: 1.5rem;
+            border: none;
+            border-radius: 4px;
+            background-color: #f0f0f0;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        .testimonial-container .right button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 0.75rem 1.5rem;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1rem;
+            transition: background-color 0.3s ease;
+        }
+
+        .testimonial-container .right button:hover {
+            background-color: #3e8e41;
+        }
+
+        /* Testimonial Cards Styles */
+        .testimonial-cards {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding: 2rem;
+        }
+
+        .testimonial-card {
+            width: 300px;
+            background-color: #fff;
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin: 1.5rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .testimonial-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .testimonial-card h3 {
+            color: #4CAF50;
+            margin-top: 0;
+            margin-bottom: 0.5rem;
+        }
+
+        .testimonial-card p {
+            margin-bottom: 0;
+            color: #666;
+        }
+
+        .testimonial-card .rating {
+            color: #ffb300;
+            font-weight: bold;
+            margin-bottom: 0.5rem;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="testimonial-section">
+        <div class="testimonial-container">
+            <!-- Left side: Image section -->
+            <div class="left">
+                <img src="testimo.jpg" alt="Testimonial Image" class="left-img">
+            </div>
+            <!-- Right side: Form section -->
+            <div class="right">
+                <h2>Give Your Testimonial</h2>
+                <form action="/submit-testimonial" method="POST" enctype="multipart/form-data">
+                    <input type="text" id="name" name="name" placeholder="Name" required />
+                    <input type="number" id="rating" name="rating" placeholder="Rating (out of 5)" min="1" max="5" required />
+                    <textarea id="testimonial" name="testimonial" placeholder="Testimonial" required></textarea>
+                    <button type="submit">Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bottom container: Display testimonials -->
+    <div class="testimonial-cards">
+        <div class="testimonial-card">
+            <h3>John Doe</h3>
+            <p class="rating">4.5/5</p>
+            <p>"Great service and excellent quality. I highly recommend this company!"</p>
+        </div>
+        <div class="testimonial-card">
+            <h3>Jane Smith</h3>
+            <p class="rating">5/5</p>
+            <p>"Exceeded my expectations. I'm very satisfied with the product and the customer support."</p>
+        </div>
+        <div class="testimonial-card">
+            <h3>Bob Johnson</h3>
+            <p class="rating">4/5</p>
+            <p>"Good value for money. I'm happy with my purchase and would use this company again."</p>
+        </div>
+    </div>
+</body>
+
+</html>
